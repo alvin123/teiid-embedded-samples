@@ -11,10 +11,11 @@ Primary purpose of this project contains:
 
 The following tables show all available samples:
 
-| **Data Sources** | **Code Snippets** | **Blog Link** |
-|:-----------|:-----------|:-----------|
-|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |http://ksoong.org/teiid-embedded-file |
-|![Mysql](metadata/img/mysql-icon.png) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |http://ksoong.org/teiid-embedded-mysql |
+| **Data Sources** | **VDB file** | **Code Snippets** | **Blog Link** |
+|:-----------------|:-------------|:------------------|:--------------|
+|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |http://ksoong.org/teiid-embedded-file |
+|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/file/TestExcelDataSource.java) |http://ksoong.org/teiid-embedded-excel |
+|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml)|[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |http://ksoong.org/teiid-embedded-mysql |
 
 
 
