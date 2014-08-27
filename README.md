@@ -1,10 +1,24 @@
 ## What's this
 
-Teiid is a data virtualization system that allows applications to use data from multiple, heterogenous data sources/stores(Relational Databases, NO-SQL, In-memory Data Grid/Cache, Flat Files, Web Services, etc). More details refer to [teiid.org](teiid.org).
-
 Teiid Embedded is a light-weight version of Teiid, it contain an easy-to-use JDBC Driver that can embed the Query Engine in any Java application. The Embedded mode supply almost all Teiid features without JEE Container involved, it supply a convenient way for Users who want integrate Teiid with their Application.
 
-The Procedure for integrate Teiid to Java Application.
+Primary purpose of this project contains:
+
+* Demonstrating how simple Java Application interect multiple, heterogenous data sources/stores(Relational Databases, NO-SQL, In-memory Data Grid/Cache, Flat Files, Web Services, etc) with Teiid Embedded.
+* Demonstrating how to develop new Translator/Connector for Teiid new Users or Teiid starter 
+
+### Available samples
+
+The following tables show all available samples:
+
+| **Data Sources** | **Code Snippets** | **Blog Link** |
+|:-----------|:-----------|:-----------|
+|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |http://ksoong.org/teiid-embedded-file |
+|![Mysql](metadata/img/mysql-icon.png) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |http://ksoong.org/teiid-embedded-mysql |
+
+
+
+## The Procedure for integrate Teiid with Java Application.
 
 ### Step I: Add Dependencies
 
@@ -47,16 +61,4 @@ Teiid Embedded have an easy-to-use JDBC Driver, we consume the data via it:
 Connection conn = server.getDriver().connect("jdbc:teiid:MyVDB", null);
 ~~~
 
-This project contain a series of samples for demonstrating how simple Java Application interect multiple, heterogenous data sources/stores(Relational Databases, NO-SQL, In-memory Data Grid/Cache, Flat Files, Web Services, etc) with Teiid.
-
-The other purpose of this project is help Teiid new Users or Teiid starter to develop a translator/connector.
-
-## Available samples
-
-The following tables show all available samples:
-
-| **Data Sources** | **Code Snippets** | **Description Link** |
-|:-----------|:-----------|:-----------|
-|Files |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |http://ksoong.org/teiid-embedded-file |
-|![Mysql](metadata/img/mysql-icon.png) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |http://ksoong.org/teiid-embedded-mysql |
 
