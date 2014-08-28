@@ -11,15 +11,15 @@ Primary purpose of this project contains:
 
 The following tables show all available samples:
 
-| **Data Sources** | **VDB file** | **Code Snippets** | **Blog Link** |
+| **Data Sources** | **VDB file** | **Code View** | **Blog Link** |
 |:-----------------|:-------------|:------------------|:--------------|
-|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |http://ksoong.org/teiid-embedded-file |
-|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/file/TestExcelDataSource.java) |http://ksoong.org/teiid-embedded-excel |
-|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml)|[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |http://ksoong.org/teiid-embedded-mysql |
+|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |[teiid-embedded-file](http://ksoong.org/teiid-embedded-file) |
+|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/excel/TestExcelDataSource.java) |[teiid-embedded-excel](http://ksoong.org/teiid-embedded-excel) |
+|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |[teiid-embedded-mysql](http://ksoong.org/teiid-embedded-mysql) |
+|![Infnispan](metadata/img/infinispan.jpeg) |[infinispancache-vdb.xml](vdb/infinispancache-vdb.xml) |[TestInfinispanLocalCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanLocalCache.java) |[teiid-embedded-cache](http://ksoong.org/teiid-embedded-cache) | 
 
 
-
-## The Procedure for integrate Teiid with Java Application.
+## How to integrate Teiid with Java Application.
 
 ### Step I: Add Dependencies
 

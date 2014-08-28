@@ -1,10 +1,10 @@
 package com.teiid.embedded.samples.infinispan;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -13,72 +13,63 @@ import java.util.Map;
 
 import javax.resource.ResourceException;
 
+import org.infinispan.Cache;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.teiid.resource.adapter.infinispan.InfinispanManagedConnectionFactory;
-import org.teiid.runtime.EmbeddedConfiguration;
-import org.teiid.runtime.EmbeddedServer;
 import org.teiid.translator.TranslatorException;
 import org.teiid.translator.object.ObjectConnection;
 import org.teiid.translator.object.ObjectExecutionFactory;
 
+import com.teiid.embedded.samples.TestBase;
 import com.teiid.embedded.samples.infinispan.model.LineItem;
 import com.teiid.embedded.samples.infinispan.model.Order;
 import com.teiid.embedded.samples.infinispan.model.Product;
+import com.teiid.embedded.samples.util.JDBCUtil;
 
-public class TestInfinispanLocalCache {
+public class TestInfinispanLocalCache extends TestBase {
 	
 	static final String TEST_CACHE_NAME = "local-quickstart-cache";
 
-	static EmbeddedServer server = null;
-	private static Connection conn = null;
-	
-	@Test
-	public void testConnection() throws ResourceException, TranslatorException {
-		InfinispanManagedConnectionFactory factory = new InfinispanManagedConnectionFactory();
-		factory.setConfigurationFileNameForLocalCache("src/test/resources/infinispan_local.xml");
-		factory.setCacheTypeMap(TEST_CACHE_NAME + ":" + "java.lang.Long;longValue");
-		ObjectConnection conn = factory.createConnectionFactory().getConnection();
-		Map<Object, Object> cache = conn.getCacheContainer().getCache(TEST_CACHE_NAME);
-		cache.put("key", "value");
-		assertEquals("value", conn.getCacheContainer().get(TEST_CACHE_NAME, "key"));
-		cache.remove("key");
-		assertEquals(0, cache.size());
-		conn.getType(TEST_CACHE_NAME);
-	}
 
-	protected void init() throws Exception {
-
-		server = new EmbeddedServer();
+	@BeforeClass
+	public static void init() throws Exception {
 		
-		ObjectExecutionFactory executionFactory = new ObjectExecutionFactory() ;
-		server.addTranslator("infinispan", executionFactory);
+		init("infinispan-local", new ObjectExecutionFactory());
 		
 		InfinispanManagedConnectionFactory managedConnectionFactory = new InfinispanManagedConnectionFactory();
-		managedConnectionFactory.setConfigurationFileNameForLocalCache("src/test/resources/infinispan_local.xml");
-		managedConnectionFactory.setCacheTypeMap(TEST_CACHE_NAME + ":" + "java.lang.Long;longValue");
-//		managedConnectionFactory.createConnectionFactory().getConnection().getCacheContainer().getCache(TEST_CACHE_NAME).putAll(loadCache());
+		managedConnectionFactory.setConfigurationFileNameForLocalCache("src/test/resources/infinispan-config-local.xml");
+		managedConnectionFactory.setCacheTypeMap(TEST_CACHE_NAME + ":" + Order.class.getName());
 		server.addConnectionFactory("java:/infinispanTest", managedConnectionFactory.createConnectionFactory());
 		
-		EmbeddedConfiguration config = new EmbeddedConfiguration();
-		server.start(config);
+		start(false);
 		
-		server.deployVDB(new FileInputStream(new File("src/vdb/infinispancache-vdb.xml")));
+		loadCache(managedConnectionFactory);
+		
+		server.deployVDB(new FileInputStream(new File("vdb/infinispancache-vdb.xml")));
 		
 		conn = server.getDriver().connect("jdbc:teiid:orders", null);
 	}
 	
 	@Test
 	public void testQuery() throws Exception {
-		init();
-		
+		assertNotNull(conn);
+		assertEquals(10, JDBCUtil.countResults(conn, "select * from OrdersView"));
+		assertEquals(7, JDBCUtil.countResults(conn, "select * from OrdersView where OrderNum > 3"));
 	}
 	
+	protected static void loadCache(InfinispanManagedConnectionFactory managedConnectionFactory) throws TranslatorException, ResourceException {
+		
+		ObjectConnection conn = (ObjectConnection) managedConnectionFactory.createConnectionFactory().getConnection();
+		Cache<String, Order> cache = conn.getCacheContainer().getCache(TEST_CACHE_NAME);
+		cache.putAll(loadCache());		
+	}
 	
 	public static final int NUM_ORDERS = 10;
 	public static final int NUM_PRODUCTS = 3;
 	
-	protected Map<Object, Object> loadCache() {
-		Map<Object, Object> incache = new HashMap<Object, Object>();
+	protected static Map<String, Order> loadCache() {
+		Map<String, Order> incache = new HashMap<String, Order>();
 		List<Product> products = new ArrayList<Product>(NUM_PRODUCTS);
 		products.add(new Product(1, "Shirt", 54.99)); 
 		products.add(new Product(2, "Pants", 89.00)); 
@@ -102,10 +93,4 @@ public class TestInfinispanLocalCache {
 		return incache;
 	}
 	
-	public static void main(String[] args) throws Exception { 
-		
-		TestInfinispanLocalCache test = new TestInfinispanLocalCache();
-		test.testQuery();
-	}
-
 }
