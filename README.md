@@ -13,11 +13,11 @@ The following tables show all available samples:
 
 | **Data Sources** | **VDB file** | **Code View** | **Blog Link** |
 |:-----------------|:-------------|:------------------|:--------------|
-|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |[teiid-embedded-file](http://ksoong.org/teiid-embedded-file) |
-|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/excel/TestExcelDataSource.java) |[teiid-embedded-excel](http://ksoong.org/teiid-embedded-excel) |
-|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |[teiid-embedded-mysql](http://ksoong.org/teiid-embedded-mysql) |
-|![Infnispan](metadata/img/infinispan.jpeg) |[infinispancache-vdb.xml](vdb/infinispancache-vdb.xml) |[TestInfinispanLocalCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanLocalCache.java) |[teiid-embedded-cache](http://ksoong.org/teiid-embedded-cache) | 
-
+|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |[teiid-embed-file](http://ksoong.org/teiid-embedded-file) |
+|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/excel/TestExcelDataSource.java) |[teiid-embed-excel](http://ksoong.org/teiid-embedded-excel) |
+|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |[teiid-embed-mysql](http://ksoong.org/teiid-embedded-mysql) |
+|![Infnispan](metadata/img/infinispan.jpeg) |[infinispancache-vdb.xml](vdb/infinispancache-vdb.xml) |[TestInfinispanLocalCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanLocalCache.java) |[teiid-embed-cache](http://ksoong.org/teiid-embedded-cache) | 
+|![Infnispan](metadata/img/infinispan.jpeg) |[remotecache-vdb.xml](vdb/remotecache-vdb.xml) |[TestInfinispanRemoteCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanRemoteCache.java) |[teiid-embed-grid](http://ksoong.org/teiid-embedded-grid) |
 
 ## How to integrate Teiid with Java Application.
 
