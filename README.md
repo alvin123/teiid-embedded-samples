@@ -18,6 +18,8 @@ The following tables show all available samples:
 |![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |[teiid-embed-mysql](http://ksoong.org/teiid-embedded-mysql) |
 |![Infnispan](metadata/img/infinispan.jpeg) |[infinispancache-vdb.xml](vdb/infinispancache-vdb.xml) |[TestInfinispanLocalCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanLocalCache.java) |[teiid-embed-cache](http://ksoong.org/teiid-embedded-cache) | 
 |![Infnispan](metadata/img/infinispan.jpeg) |[remotecache-vdb.xml](vdb/remotecache-vdb.xml) |[TestInfinispanRemoteCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanRemoteCache.java) |[teiid-embed-grid](http://ksoong.org/teiid-embedded-grid) |
+|![Cassandra](metadata/img/cassandra.gif) |[cassandra-vdb.xml](vdb/cassandra-vdb.xml) |[TestCassandraDataSource](src/test/java/com/teiid/embedded/samples/cassandra/TestCassandraDataSource.java) |[teiid-embed-cassandra](http://ksoong.org/teiid-cassandra) |
+
 
 ## How to integrate Teiid with Java Application.
 
