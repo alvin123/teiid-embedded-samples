@@ -123,6 +123,21 @@
 			<version>8.9.0.Alpha2-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.jboss.teiid.connectors</groupId>
+			<artifactId>connector-ws</artifactId>
+			<version>8.9.0.Alpha2-SNAPSHOT</version>
+			<classifier>lib</classifier>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jboss.teiid.connectors</groupId>
+			<artifactId>translator-ws</artifactId>
+			<version>8.9.0.Alpha2-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>
