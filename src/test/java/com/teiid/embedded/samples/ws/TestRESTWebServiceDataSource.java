@@ -15,16 +15,13 @@ import com.teiid.embedded.samples.TestBase;
 import com.teiid.embedded.samples.util.JDBCUtil;
 
 public class TestRESTWebServiceDataSource extends TestBase {
-	
-	static final String ENDPOINT = "http://localhost:8080/CustomerRESTWebSvc/MyRESTApplication/customerList";
-	
+		
 	@BeforeClass
 	public static void init() throws Exception {
 		
 		init("translator-rest", new WSExecutionFactory());
 		
 		WSManagedConnectionFactory managedconnectionFactory = new WSManagedConnectionFactory();
-		managedconnectionFactory.setEndPoint(ENDPOINT);
 		server.addConnectionFactory("java:/CustomerRESTWebSvcSource", managedconnectionFactory.createConnectionFactory());
 		
 		start(false);

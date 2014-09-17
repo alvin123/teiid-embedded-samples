@@ -22,6 +22,7 @@ The following tables show all available samples:
 |![Cassandra](metadata/img/cassandra.gif) |[cassandra-vdb.xml](vdb/cassandra-vdb.xml) |[TestCassandraDataSource](src/test/java/com/teiid/embedded/samples/cassandra/TestCassandraDataSource.java) |[teiid-embed-cassandra](http://ksoong.org/teiid-cassandra) |
 |![MongoDB](metadata/img/mongodb.jpeg) |[mongodb-vdb.xml](vdb/mongodb-vdb.xml) |[TestMongoDBDataSource](src/test/java/com/teiid/embedded/samples/mongodb/TestMongoDBDataSource.java) |[teiid-embed-mongodb](http://ksoong.org/teiid-mongodb) |
 |REST WebService |[restwebservice-vdb.xml](vdb/restwebservice-vdb.xml) |[TestRESTWebServiceDataSource](src/test/java/com/teiid/embedded/samples/ws/TestRESTWebServiceDataSource.java) |[teiid-embed-restws](http://ksoong.org/teiid-restws) |
+|WebService |[webservice-vdb.xml](vdb/webservice-vdb.xml) |[TestWebServiceDataSource](src/test/java/com/teiid/embedded/samples/ws/TestWebServiceDataSource.java) |[teiid-embed-ws](http://ksoong.org/teiid-ws) |
 
 
 ## How to integrate Teiid with Java Application.
