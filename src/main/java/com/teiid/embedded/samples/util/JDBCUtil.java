@@ -7,6 +7,9 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.teiid.client.plan.PlanNode;
+import org.teiid.jdbc.TeiidStatement;
+
 public class JDBCUtil {
 	
 	public static Connection getDriverConnection(String driver, String url, String user, String pass) throws Exception {
@@ -85,7 +88,9 @@ public class JDBCUtil {
 		
 		try {
 			stmt = conn.createStatement();
+			stmt.execute("set showplan on");
 			rs = stmt.executeQuery(sql);
+			printQueryPlan(stmt, sql);
 			while(rs.next()) {
 				count ++ ;
 			}
@@ -99,6 +104,13 @@ public class JDBCUtil {
 		
 	}
 	
+	private static void printQueryPlan(Statement stmt, String sql) throws SQLException {
+		System.out.println("Query Plans for execute " + sql);
+		TeiidStatement tstatement = stmt.unwrap(TeiidStatement.class);
+		PlanNode queryPlan = tstatement.getPlanDescription();
+		System.out.println(queryPlan);
+	}
+
 	public static Object query(Connection conn, String sql) throws Exception {
 		
 		Object result = null;
