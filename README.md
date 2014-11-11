@@ -13,17 +13,17 @@ The following tables show all available samples:
 
 | **Data Sources** | **VDB file** | **Code View** | **Blog Link** |
 |:-----------------|:-------------|:------------------|:--------------|
-|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |[teiid-embed-file](http://ksoong.org/teiid-embedded-file) |
-|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/excel/TestExcelDataSource.java) |[teiid-embed-excel](http://ksoong.org/teiid-embedded-excel) |
-|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |[teiid-embed-mysql](http://ksoong.org/teiid-embedded-mysql) |
-|![H2](metadata/img/h2-icon.png) |[h2-vdb.xml](vdb/h2-vdb.xml) |[TestH2DataSource](src/test/java/com/teiid/embedded/samples/h2/TestH2DataSource.java) |[teiid-embed-h2](http://ksoong.org/teiid-embedded-h2) |
-|![Infnispan](metadata/img/infinispan.jpeg) |[infinispancache-vdb.xml](vdb/infinispancache-vdb.xml) |[TestInfinispanLocalCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanLocalCache.java) |[teiid-embed-cache](http://ksoong.org/teiid-embedded-cache) | 
-|![Infnispan](metadata/img/infinispan.jpeg) |[remotecache-vdb.xml](vdb/remotecache-vdb.xml) |[TestInfinispanRemoteCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanRemoteCache.java) |[teiid-embed-grid](http://ksoong.org/teiid-embedded-grid) |
-|![Cassandra](metadata/img/cassandra.gif) |[cassandra-vdb.xml](vdb/cassandra-vdb.xml) |[TestCassandraDataSource](src/test/java/com/teiid/embedded/samples/cassandra/TestCassandraDataSource.java) |[teiid-embed-cassandra](http://ksoong.org/teiid-cassandra) |
-|![MongoDB](metadata/img/mongodb.jpeg) |[mongodb-vdb.xml](vdb/mongodb-vdb.xml) |[TestMongoDBDataSource](src/test/java/com/teiid/embedded/samples/mongodb/TestMongoDBDataSource.java) |[teiid-embed-mongodb](http://ksoong.org/teiid-mongodb) |
-|REST WebService |[restwebservice-vdb.xml](vdb/restwebservice-vdb.xml) |[TestRESTWebServiceDataSource](src/test/java/com/teiid/embedded/samples/ws/TestRESTWebServiceDataSource.java) |[teiid-embed-restws](http://ksoong.org/teiid-restws) |
-|WebService |[webservice-vdb.xml](vdb/webservice-vdb.xml) |[TestWebServiceDataSource](src/test/java/com/teiid/embedded/samples/ws/TestWebServiceDataSource.java) |[teiid-embed-ws](http://ksoong.org/teiid-ws) |
-|![OpenLDAP](metadata/img/logo-openldap.png) |[ldap-vdb.xml](vdb/ldap-vdb.xml) |[TestLDAPDataSource](src/test/java/com/teiid/embedded/samples/ldap/TestLDAPDataSource.java) |[teiid-embedded-ldap](http://ksoong.org/teiid-ldap) |
+|![CSV](metadata/img/csv.jpeg) ![XML](metadata/img/xml.jpeg) ![TXT](metadata/img/text_icon.gif) |[files-vdb.xml](vdb/files-vdb.xml) |[TestFileDataSource](src/test/java/com/teiid/embedded/samples/file/TestFileDataSource.java) |[link](http://ksoong.org/teiid-embedded-file) |
+|![Excel](metadata/img/excel.jpeg) |[excel-vdb.xml](vdb/excel-vdb.xml) |[TestExcelDataSource](src/test/java/com/teiid/embedded/samples/excel/TestExcelDataSource.java) |[link](http://ksoong.org/teiid-embedded-excel) |
+|![Mysql](metadata/img/mysql-icon.png) |[mysql-vdb.xml](vdb/mysql-vdb.xml) |[TestMysqDataSource](src/test/java/com/teiid/embedded/samples/mysql/TestMysqDataSource.java) |[link](http://ksoong.org/teiid-embedded-mysql) |
+|![H2](metadata/img/h2-icon.png) |[h2-vdb.xml](vdb/h2-vdb.xml) |[TestH2DataSource](src/test/java/com/teiid/embedded/samples/h2/TestH2DataSource.java) |[link](http://ksoong.org/teiid-embedded-h2) |
+|![Infnispan](metadata/img/infinispan.jpeg) |[infinispancache-vdb.xml](vdb/infinispancache-vdb.xml) |[TestInfinispanLocalCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanLocalCache.java) |[link](http://ksoong.org/teiid-embedded-cache) | 
+|![Infnispan](metadata/img/infinispan.jpeg) |[remotecache-vdb.xml](vdb/remotecache-vdb.xml) |[TestInfinispanRemoteCache](src/test/java/com/teiid/embedded/samples/infinispan/TestInfinispanRemoteCache.java) |[link](http://ksoong.org/teiid-embedded-grid) |
+|![Cassandra](metadata/img/cassandra.gif) |[cassandra-vdb.xml](vdb/cassandra-vdb.xml) |[TestCassandraDataSource](src/test/java/com/teiid/embedded/samples/cassandra/TestCassandraDataSource.java) |[link](http://ksoong.org/teiid-cassandra) |
+|![MongoDB](metadata/img/mongodb.jpeg) |[mongodb-vdb.xml](vdb/mongodb-vdb.xml) |[TestMongoDBDataSource](src/test/java/com/teiid/embedded/samples/mongodb/TestMongoDBDataSource.java) |[link](http://ksoong.org/teiid-mongodb) |
+|REST WebService |[restwebservice-vdb.xml](vdb/restwebservice-vdb.xml) |[TestRESTWebServiceDataSource](src/test/java/com/teiid/embedded/samples/ws/TestRESTWebServiceDataSource.java) |[link](http://ksoong.org/teiid-restws) |
+|WebService |[webservice-vdb.xml](vdb/webservice-vdb.xml) |[TestWebServiceDataSource](src/test/java/com/teiid/embedded/samples/ws/TestWebServiceDataSource.java) |[link](http://ksoong.org/teiid-ws) |
+|![OpenLDAP](metadata/img/logo-openldap.png) |[ldap-vdb.xml](vdb/ldap-vdb.xml) |[TestLDAPDataSource](src/test/java/com/teiid/embedded/samples/ldap/TestLDAPDataSource.java) |[link](http://ksoong.org/teiid-ldap) |
 
 
 ## How to integrate Teiid with Java Application.
