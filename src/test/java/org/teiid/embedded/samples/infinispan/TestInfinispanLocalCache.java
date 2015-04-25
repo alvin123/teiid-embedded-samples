@@ -10,6 +10,7 @@ import javax.resource.ResourceException;
 
 import org.infinispan.Cache;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.embedded.samples.TestInfnispanBase;
 import org.teiid.embedded.samples.infinispan.model.Order;
@@ -19,6 +20,7 @@ import org.teiid.translator.TranslatorException;
 import org.teiid.translator.object.ObjectConnection;
 import org.teiid.translator.object.ObjectExecutionFactory;
 
+@Ignore()
 public class TestInfinispanLocalCache extends TestInfnispanBase {
 	
 	static final String TEST_CACHE_NAME = "local-quickstart-cache";

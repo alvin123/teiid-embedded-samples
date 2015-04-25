@@ -23,7 +23,7 @@ public class TestBase {
 		server.addTranslator(name, factory);
 	}
 	
-	protected static void start(boolean isRemote){
+	protected static void start(boolean isRemote) throws Exception{
 		
 		if(isRemote) {
 			SocketConfiguration s = new SocketConfiguration();
@@ -32,10 +32,13 @@ public class TestBase {
 			s.setPortNumber(addr.getPort());
 			s.setProtocol(WireProtocol.teiid);
 			EmbeddedConfiguration config = new EmbeddedConfiguration();
+			config.setTransactionManager(EmbeddedHelper.getTransactionManager());
 			config.addTransport(s);
 			server.start(config);
 		} else {
-			server.start(new EmbeddedConfiguration());
+			EmbeddedConfiguration config = new EmbeddedConfiguration();
+			config.setTransactionManager(EmbeddedHelper.getTransactionManager());
+			server.start(config);
 		}
 	}
 	

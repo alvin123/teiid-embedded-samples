@@ -15,6 +15,7 @@ import javax.xml.stream.XMLStreamReader;
 import javax.xml.transform.stax.StAXSource;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.core.types.SQLXMLImpl;
 import org.teiid.embedded.samples.TestBase;
@@ -23,6 +24,7 @@ import org.teiid.resource.adapter.ws.WSManagedConnectionFactory;
 import org.teiid.translator.ws.WSExecutionFactory;
 import org.teiid.util.StAXSQLXML;
 
+@Ignore("Need SOAPService Running")
 public class TestWebServiceDataSource extends TestBase {
 	
 	static final String GET_ALL = "<GetAllStateInfo xmlns=\"http://www.teiid.org/stateService/\"/>";

@@ -7,12 +7,14 @@ import java.io.File;
 import java.io.FileInputStream;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.embedded.samples.TestBase;
 import org.teiid.embedded.samples.util.JDBCUtil;
 import org.teiid.resource.adapter.mongodb.MongoDBManagedConnectionFactory;
 import org.teiid.translator.mongodb.MongoDBExecutionFactory;
 
+@Ignore("Need Mongo Running")
 public class TestMongoDBDataSource extends TestBase {
 	
 	private static final String SERVERLIST = "10.66.218.46:27017" ;

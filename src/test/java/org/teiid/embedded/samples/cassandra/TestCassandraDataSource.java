@@ -7,12 +7,14 @@ import java.io.File;
 import java.io.FileInputStream;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.embedded.samples.TestBase;
 import org.teiid.embedded.samples.util.JDBCUtil;
 import org.teiid.resource.adapter.cassandra.CassandraManagedConnectionFactory;
 import org.teiid.translator.cassandra.CassandraExecutionFactory;
 
+@Ignore("Need Cassandra Server running")
 public class TestCassandraDataSource extends TestBase {
 	
 	// Cassandra Contact Point Address

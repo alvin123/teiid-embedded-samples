@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import org.infinispan.client.hotrod.RemoteCacheManager;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.embedded.samples.TestInfnispanBase;
 import org.teiid.embedded.samples.infinispan.model.Order;
@@ -17,6 +18,7 @@ import org.teiid.embedded.samples.util.JDBCUtil;
 import org.teiid.resource.adapter.infinispan.InfinispanManagedConnectionFactory;
 import org.teiid.translator.object.ObjectExecutionFactory;
 
+@Ignore()
 public class TestInfinispanRemoteCache extends TestInfnispanBase {
 	
 private static final String PROPERTIES_FILE = "jdg.properties";

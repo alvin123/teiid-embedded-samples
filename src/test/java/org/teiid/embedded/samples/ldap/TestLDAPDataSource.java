@@ -7,12 +7,14 @@ import java.io.File;
 import java.io.FileInputStream;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.embedded.samples.TestBase;
 import org.teiid.embedded.samples.util.JDBCUtil;
 import org.teiid.resource.adapter.ldap.LDAPManagedConnectionFactory;
 import org.teiid.translator.ldap.LDAPExecutionFactory;
 
+@Ignore("Need Ldap Running")
 public class TestLDAPDataSource extends TestBase{
 	
 	@BeforeClass

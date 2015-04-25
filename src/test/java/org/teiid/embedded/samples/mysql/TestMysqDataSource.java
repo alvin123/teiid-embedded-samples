@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import javax.naming.Context;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.teiid.embedded.samples.TestBase;
 import org.teiid.embedded.samples.util.JDBCUtil;
@@ -15,6 +16,7 @@ import org.teiid.translator.jdbc.mysql.MySQL5ExecutionFactory;
 
 import bitronix.tm.resource.jdbc.PoolingDataSource;
 
+@Ignore()
 public class TestMysqDataSource extends TestBase {
 	
 	static {
