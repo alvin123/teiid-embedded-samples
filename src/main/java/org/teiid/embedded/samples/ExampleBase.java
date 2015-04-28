@@ -9,6 +9,7 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.transform.stax.StAXSource;
 
 import org.teiid.runtime.EmbeddedConfiguration;
+import org.teiid.runtime.EmbeddedHelper;
 import org.teiid.runtime.EmbeddedServer;
 import org.teiid.translator.ExecutionFactory;
 import org.teiid.translator.TranslatorException;

@@ -19,6 +19,7 @@
 		<infinispan.version>5.2.7.Final</infinispan.version>
 		<teiid.version>8.11.0.Alpha3-SNAPSHOT</teiid.version>
 		<version.narayana>5.0.4.Final</version.narayana>
+		<ironjacamar.version>1.0.24.Final</ironjacamar.version>
 	</properties>
 
 	<repositories>
@@ -42,6 +43,40 @@
 			</exclusion>
 		</exclusions>
 	</dependency>
+	
+	<dependency>
+			<groupId>org.jboss.ironjacamar</groupId>
+			<artifactId>ironjacamar-core-api</artifactId>
+			<version>${ironjacamar.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.jboss.spec.javax.transaction</groupId>
+					<artifactId>jboss-transaction-api_1.1_spec</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.jboss.logging</groupId>
+					<artifactId>jboss-logging-spi</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	
+	<dependency>
+			<groupId>org.jboss.ironjacamar</groupId>
+			<artifactId>ironjacamar-core-impl</artifactId>
+			<version>${ironjacamar.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.jboss</groupId>
+  					<artifactId>jboss-transaction-spi</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jboss.ironjacamar</groupId>
+			<artifactId>ironjacamar-jdbc</artifactId>
+			<version>${ironjacamar.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.jboss.teiid</groupId>

@@ -2,12 +2,17 @@ package org.teiid.embedded.samples;
 
 import static org.junit.Assert.assertEquals;
 
+import java.sql.Connection;
+
+import javax.sql.DataSource;
 import javax.transaction.RollbackException;
 import javax.transaction.Status;
 import javax.transaction.TransactionManager;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.teiid.embedded.samples.util.JDBCUtil;
+import org.teiid.runtime.EmbeddedHelper;
 
 public class TestEmbeddedHelper {
 	
@@ -76,6 +81,14 @@ public class TestEmbeddedHelper {
 		Thread.sleep(1000 * 5);
 		
 		tm.commit();
+	}
+	
+	@Test
+	public void testDataSource() throws Exception {
+		DataSource ds = EmbeddedHelper.newDataSource("org.h2.Driver", "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", "sa", "sa");
+		Connection conn = ds.getConnection();
+		JDBCUtil.executeQuery(conn, "SELECT CURRENT_DATE(), CURRENT_TIME()");
+		JDBCUtil.close(conn);
 	}
 
 }
