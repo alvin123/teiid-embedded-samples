@@ -12,7 +12,6 @@ import javax.transaction.TransactionManager;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.teiid.embedded.samples.util.JDBCUtil;
-import org.teiid.runtime.EmbeddedHelper;
 
 public class TestEmbeddedHelper {
 	

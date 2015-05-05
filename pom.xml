@@ -17,7 +17,8 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<infinispan.version>5.2.7.Final</infinispan.version>
-		<teiid.version>8.11.0.Alpha3-SNAPSHOT</teiid.version>
+		<teiid.version>8.11.0.Beta2-SNAPSHOT</teiid.version>
+		
 		<version.narayana>5.0.4.Final</version.narayana>
 		<ironjacamar.version>1.0.24.Final</ironjacamar.version>
 	</properties>
@@ -187,21 +188,18 @@
 			<artifactId>connector-ldap</artifactId>
 			<version>${teiid.version}</version>
 			<classifier>lib</classifier>
-			<scope>test</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.jboss.teiid.connectors</groupId>
 			<artifactId>translator-ldap</artifactId>
 			<version>${teiid.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.30</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>

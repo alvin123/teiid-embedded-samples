@@ -20,8 +20,8 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.teiid.adminapi.Transaction;
+import org.teiid.embedded.samples.EmbeddedHelper;
 import org.teiid.embedded.samples.TestBase;
-import org.teiid.runtime.EmbeddedHelper;
 import org.teiid.translator.jdbc.h2.H2ExecutionFactory;
 
 public class TestH2DataSource extends TestBase {
